@@ -1,0 +1,120 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+body{
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #555252;
+  font-family: 'Open Sans', sans-serif;
+  &.fixed{
+    overflow: hidden;
+  }
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title{
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 60px;
+  color: #555252;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 70px;
+  &::before,
+  &::after{
+    content: "";
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  &::before{
+    width: 140px;
+    background-color: #555252;
+  }
+  &::after{
+    width: 60px;
+    background-color: #ff6600;
+  }
+}
+
+.jq-ry-normal-group.jq-ry-group svg{
+  fill: #fff;
+  stroke-width: 25;
+  stroke: #e34b11;
+}
+
+.jq-ry-rated-group.jq-ry-group svg{
+  fill: #e34b11;
+}
+
+
+.gallery__btn{
+  button.mixitup-control-active{
+    color: #fff;
+    background-color: #e34b11;
+    border-color: #e34b11;
+  }
+}
+
+
+.btn--orange{
+  width: 140px;
+  color: #fff;
+  background-color: #ff6600;
+}
+
+.btn--transparent{
+  color: #e34b11;
+  border: 1px solid #e34b11;
+  width: 150px;
+  background-color: transparent;
+}
+
+
+
+@mixin imagesPos {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+

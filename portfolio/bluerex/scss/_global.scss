@@ -1,0 +1,97 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+p{
+  margin: 0;
+  line-height: 0px;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.fluid-container{
+  max-width: 1920px;
+  padding: 0 9px;
+  margin: 0 auto;
+}
+
+body,
+html{
+  position: relative;
+  overflow-x: hidden;
+  &.no--scroll{
+    overflow: hidden;
+  }
+}
+
+@mixin mont300 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+@mixin mont400 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+@mixin mont600 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+@mixin popp600 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+@mixin popp700 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.double--btn{
+  width: 146px;
+  box-shadow: 0px 10px 0px 0px rgba(255, 89, 144, 0.004);
+  background-color: #f42267;
+  border-radius: 10px;
+  @include mont600;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  transition: all linear 0.3s;
+  box-shadow: 0 10px #ff5990;
+  &:hover{
+    transform: translateY(10px);
+    box-shadow: 0 0 #ff5990;
+  }
+}

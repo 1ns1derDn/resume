@@ -1,0 +1,130 @@
+.aside{
+  max-width: 320px;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-right: 1px solid rgba($color:#fff, $alpha: 0.2);
+  z-index: 1000;
+}
+
+.aside__inner{
+  text-align: center;
+  height: 100vh;
+  padding: 50px 25px;
+  overflow-y: auto;
+}
+
+.aside__images{
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 30px auto;
+}
+
+.aside__img{
+  height: 100%;
+}
+
+.aside__name{
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.aside__prof{
+  margin-bottom: 20px;
+}
+
+.aside__social{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 40px;
+}
+
+.aside__social-item{
+  & + .aside__social-item{
+    margin-left: 10px;
+  }
+}
+
+.aside__social-link{
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  transition: color ease 0.3s;
+  &:hover{
+    color: #75b1f8;
+  }
+}
+
+.aside__text{
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+
+.aside_phone-link{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  height: 40px;
+  max-width: 200px;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 30px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border: 1px solid rgba($color:#fff, $alpha: 0.2);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  transition: color ease 0.3s;
+  &:hover{
+    color: #75b1f8;
+    border-color: #75b1f8;
+  }
+}
+
+.arrow-aside{
+  color: #fff;
+  font-size: 30px;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+
+}
+
+@media(max-width: 880px){
+  .aside{
+    z-index: 1002;
+    transform: translateX(-100%);
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    border-right: 1px solid rgba($color:#fff, $alpha: 0.9);
+    &.active{
+      transform: translateX(0%);
+      transition: all linear 0.3s;
+      .arrow-aside{
+        transform: rotateY(180deg) translateY(-50%);
+        right: 10px;
+      }
+    }
+  }
+
+  .arrow-aside{
+    display: block;
+    transition: all linear 0.3s;
+  }
+}
+
+
+

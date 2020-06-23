@@ -1,0 +1,154 @@
+.header{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  border-top: 1px solid rgba($color:#fff, $alpha: 0.2);
+  width: 100%;
+  z-index: 1001;
+  box-sizing: content-box;
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__info{
+  max-width: 310px;
+  width: 100%;
+}
+
+.menu{
+  width: 100%;
+}
+
+.menu__list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.menu__item{
+  & + .menu__item{
+    margin-left: 50px;
+  }
+}
+
+.menu__link{
+  text-transform: uppercase;
+  font-weight: 700;
+  min-width: 120px;
+  color: #fff;
+  text-decoration: none;
+  transition: color ease 0.3s;
+  &.active{
+    color: #75b1f8;
+  }
+  &:hover{
+    color: #75b1f8;
+  }
+}
+
+
+
+.burger{
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 8px;
+  background-color: #fff;
+  width: 30px;
+  height: 3px;
+  transition: ease 0.3s;
+  z-index: 2;
+  &::before,
+  &::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    transition: ease 0.3s;
+  }
+
+  &::before{
+    top: 9px;
+  }
+  &::after{
+    bottom: 9px;
+  }
+}
+
+::-webkit-scrollbar{
+}
+
+/// media header
+
+@media(max-width: 1100px){
+  .header__inner{
+    padding-left: 10px;
+    padding-right: 40px;
+  }
+  .header__info{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    max-width: 280px;
+  }
+  .burger{
+    display: block;
+  }
+
+  .menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  .menu.active{
+    .menu__list{
+      transition: all linear 0.3s;
+      visibility: visible;
+      transform: translateX(0%);
+    }
+    .burger{
+      background-color: transparent;
+      &::before{
+        top: 0px;
+        transform: rotate(-405deg);
+      }
+      &::after{
+        bottom: 0px;
+        transform: rotate(405deg);
+      }
+    }
+  }
+  .menu__list{
+    overflow-y: auto;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+    border-left: 1px solid rgba($color:#fff, $alpha: 0.9);
+    transform: translateX(100%);
+    .menu__item{
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media(min-width: 1020px){
+  .menu__list{
+    display: flex !important;
+  }
+}
+

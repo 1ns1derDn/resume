@@ -1,0 +1,10 @@
+.hello{
+  background-image: url(../img/home.jpg);
+  overflow: auto;
+}
+
+.hello__inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

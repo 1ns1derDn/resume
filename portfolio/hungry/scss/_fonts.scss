@@ -1,0 +1,71 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Banny-LightRound", sans-serif;
+
+  src: url("../fonts/Banny-LightRound.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/Banny-LightRound.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "Banny-BoldRound", sans-serif;
+
+  src: url("../fonts/Banny-BoldRound.woff") format("woff"), /* Modern Browsers */
+    url(".,/fonts/Banny-BoldRound.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?c3l8gp');
+  src:  url('../fonts/icomoon.eot?c3l8gp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?c3l8gp') format('truetype'),
+    url('../fonts/icomoon.woff?c3l8gp') format('woff'),
+    url('../fonts/icomoon.svg?c3l8gp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-map-marker:before {
+  content: "\f041";
+}
+.icon-chevron-down:before {
+  content: "\f078";
+}
+.icon-phone:before {
+  content: "\f095";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-facebook-f:before {
+  content: "\f09a";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-instagram:before {
+  content: "\f16d";
+}

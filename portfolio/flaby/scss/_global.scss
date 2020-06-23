@@ -1,0 +1,94 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+html,
+body{
+  position: relative;
+  overflow-x: hidden;
+  &.active{
+    overflow: hidden;
+  }
+}
+body{
+  color: #7c7c7c;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.title{
+  color: #7c7c7c;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Roboto Slab', sans-serif;
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  span{
+    letter-spacing: 2px;
+    max-width: 550px;
+    margin: 0 auto;
+    display: block;
+    font-size: 24px;
+    color: #494949;
+    word-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 5px;
+    &::after{
+      content: "";
+      height: 2px;
+      width: 30px;
+      background-color: #2eb0ec;
+      display: block;
+      margin: 22px auto 0px;
+    }
+  }
+}
+.container-fluid{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+@mixin images {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@mixin fw500 {
+  font-family: "MuseoSlab-500",sans-serif;
+  font-weight: 500;
+}
+// font-family: 'Roboto Slab', ;
+// font-family: 'Raleway', ;

@@ -1,0 +1,133 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: inherit;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff9f9;
+  background-color: rgb(22, 20, 20);
+}
+
+p{
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.suptitle{
+  font-size: 18px;
+  font-weight:400;
+  font-style:italic;
+  border: 1px solid rgba($color:#fff, $alpha: 0.2);
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  padding: 5px;
+  display: inline-block;
+}
+
+.title{
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.subtitle{
+  font-size: 18px;
+}
+
+.images-bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.possstion-inner{
+  padding-bottom: 120px;
+  padding-left: 330px;
+  padding-right: 10px;
+  padding-top: 60px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.title-possition{
+  position: absolute;
+  right: 70px;
+  top: 0px;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 82px;
+  color: rgba($color: #fff, $alpha: .1);
+  transform: rotate(-90deg);
+  transform-origin: right;
+  text-transform: uppercase;
+  z-index: 900;
+}
+
+.slider__item{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: linear 0.5s;
+  visibility: hidden;
+}
+
+.active{
+  opacity: 1;
+  visibility: visible;
+}
+
+.mask-bg{
+  &::before{
+    content: "";
+    background-color: rgba($color: #000000, $alpha: .4);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+}
+
+@media(max-width: 880px){
+  .title-possition{
+    font-size: 43px;
+    right: 10px;
+    top: 30px;
+    left: auto;
+    transform-origin: 50% 50% 0;
+    transform: rotate(0deg);
+  }
+  .possstion-inner{
+    padding-left: 35px;
+    padding-right: 25px;
+    padding-bottom: 120px;
+    padding-top: 60px;
+  }
+}
